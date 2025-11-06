@@ -13,7 +13,8 @@
     "typecheck": "npm --prefix api run typecheck && npm --prefix web run typecheck",
     "prepare": "husky",
     "docker:up": "docker compose up -d",
-    "docker:down": "docker compose down -v"
+    "docker:down": "docker compose down -v",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
