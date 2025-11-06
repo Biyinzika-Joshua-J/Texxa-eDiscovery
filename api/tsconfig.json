@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    /* ---- Output ---- */
+    "outDir": "dist",
+    "rootDir": "src",
+
+    /* ---- Language & Module ---- */
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "allowJs": false,
+
+    /* ---- Type Checking ---- */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* ---- Import Behavior ---- */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* ---- Source Maps ---- */
+    "sourceMap": true,
+
+    /* ---- Incremental Builds ---- */
+    "incremental": true,
+
+    /* ---- Type Declarations ---- */
+    "types": ["node", "express"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}

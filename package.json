@@ -1,0 +1,45 @@
+{
+  "name": "code2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm --prefix api run dev\" \"npm --prefix web run dev\"",
+    "build": "npm --prefix api run build && npm --prefix web run build",
+    "test": "npm --prefix api run test && npm --prefix web run test",
+    "lint": "eslint \"{api,web,shared}/**/*.{ts,tsx,js,jsx}\"",
+    "format": "prettier . --write",
+    "typecheck": "npm --prefix api run typecheck && npm --prefix web run typecheck",
+    "prepare": "husky",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down -v"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}
